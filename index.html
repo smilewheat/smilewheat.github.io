@@ -33,7 +33,7 @@
 
   
 
-<link rel="stylesheet" type="text/css" href="/assets/css/DPlayer.min.css"><script src="/assets/js/DPlayer.min.js"></script></head>
+</head>
 
 </html>
 
@@ -101,6 +101,101 @@
     
     
     <article
+  id="post-videotest"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/08/11/videotest/"
+    >视频测试</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2020/08/11/videotest/" class="article-date">
+  <time datetime="2020-08-11T01:40:38.000Z" itemprop="datePublished">2020-08-11</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>原视频来自YouTube 用来测试播放器播放连贯性。</p>
+<style type="text/css">
+    #dplayer-video-container {
+        max-width: 800px;
+        margin: 0 auto;
+        margin-top: -1rem;
+    }
+    @media screen and (max-device-width: 400px) {
+        #dplayer {
+            width: 100%;
+        }
+    }
+</style>  
+
+<link rel="stylesheet" href="/assets/css/DPlayer.min.css">
+<div id="dplayer-video-container">
+    <div id="dplayer"></div>
+<div>
+<script src="/assets/js/DPlayer.min.js"></script>
+<script>
+    const dp = new DPlayer({
+        container: document.getElementById('dplayer'),  <!-- 播放器容器元素 -->
+        autoplay: false,                                <!-- 视频自动播放 -->
+        theme:    '#b7daff',                               <!-- 主题色 -->
+        loop: true,                                    <!-- 视频循环播放 -->
+        lang: 'zh-cn',                                  <!-- 播放器语言设置 -->
+        screenshot: false,                              <!-- 开启截图 -->
+        hotkey: true,                                      <!-- 开启热键 -->                        
+        preload: 'false',                                <!-- 开启预加载 -->
+        volume    : 0.7,                                    <!-- 默认音量 -->
+        mutex: true,                                    <!-- 互斥，阻止多个播放器同时播放 -->
+        video: {
+            url: 'https://1877.oss-cn-beijing.aliyuncs.com/video/%E3%80%90Mashup%E3%80%91alien%E7%9A%84alien%E7%94%9F%E6%B4%BB%E3%80%90%E3%81%93%E3%81%B0%E3%82%8B%E3%81%A8%E3%80%91.mp4',      <!-- 视频地址 -->
+            pic: ''         <!-- 视频封面 -->
+        },
+        contextmenu: [                                 <!-- 自定义右键菜单--> 
+            {
+                text: '本博客地址',
+                link: 'https://smilewheat.gitee.io/'
+            },
+            {
+                text: '播放器信息',
+                click: (player) => {
+                    console.log(player);
+                }
+            }
+        ]
+    });
+</script>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+    
+ 
+   
+</article>
+
+    
+    <article
   id="post-test"
   class="article article-type-post"
   itemscope
@@ -128,63 +223,6 @@
     <div class="article-entry" itemprop="articleBody">
        
   <p>本网站为个人网站，旨在为班内同学提供学习资料，本网站为非营利性网站，可能会出现卡顿等情况，如有，请联系管理员 唐辫小二。</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-    </footer>
-  </div>
-
-    
- 
-   
-</article>
-
-    
-    <article
-  id="post-videotest"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/04/10/videotest/"
-    >Daisuke</a> 
-</h2>
- 
-
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2020/04/10/videotest/" class="article-date">
-  <time datetime="2020-04-10T08:56:38.000Z" itemprop="datePublished">2020-04-10</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>原视频来自YouTube 用来测试播放器播放连贯性。</p>
-<div>
-请刷新来激活播放器
-<div>
-<input type=button value=刷新 onclick="location.reload()"> 《== 点击刷新
-<div>
-Daisuke 60 FPS FULL
-<div>
-<div class="dplayer-video-container">
-<div id="dplayer0" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer0"),"theme":"#FADFA3","loop":true,"video":{"url":" /media/test/test.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
-<div>
  
       <!-- reward -->
       
