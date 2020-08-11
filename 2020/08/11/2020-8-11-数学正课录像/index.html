@@ -70,7 +70,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">183</span>
+            <span class="post-count">91</span>
         </span>
     </span>
 
@@ -140,54 +140,7 @@
         ]
     });
 </script>
-<style type="text/css">
-    #dplayer-video-container {
-        max-width: 800px;
-        margin: 0 auto;
-        margin-top: -1rem;
-    }
-    @media screen and (max-device-width: 400px) {
-        #dplayer {
-            width: 100%;
-        }
-    }
-</style>  
-
-<link rel="stylesheet" href="/assets/css/DPlayer.min.css">
-<div id="dplayer-video-container">
-    <div id="dplayer"></div>
-<div>
-<script src="/assets/js/DPlayer.min.js"></script>
-<script>
-    const dp = new DPlayer({
-        container: document.getElementById('dplayer'),  <!-- 播放器容器元素 -->
-        autoplay: false,                                <!-- 视频自动播放 -->
-        theme:    '#b7daff',                               <!-- 主题色 -->
-        loop: true,                                    <!-- 视频循环播放 -->
-        lang: 'zh-cn',                                  <!-- 播放器语言设置 -->
-        screenshot: false,                              <!-- 开启截图 -->
-        hotkey: true,                                      <!-- 开启热键 -->                        
-        preload: 'false',                                <!-- 开启预加载 -->
-        volume    : 0.7,                                    <!-- 默认音量 -->
-        mutex: true,                                    <!-- 互斥，阻止多个播放器同时播放 -->
-        video: {
-            url: 'https://1877-1302844673.cos.ap-beijing.myqcloud.com/video/math/2020-8-11-math-2.mp4',      <!-- 视频地址 -->
-            pic: ''         <!-- 视频封面 -->
-        },
-        contextmenu: [                                 <!-- 自定义右键菜单--> 
-            {
-                text: '本博客地址',
-                link: 'https://smilewheat.gitee.io/'
-            },
-            {
-                text: '播放器信息',
-                click: (player) => {
-                    console.log(player);
-                }
-            }
-        ]
-    });
-</script> 
+ 
       <!-- reward -->
       
       <div id="reword-out">
