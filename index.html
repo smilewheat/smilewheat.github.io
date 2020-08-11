@@ -145,7 +145,6 @@
     <div id="dplayer"></div>
 <div>
 <script src="/assets/js/DPlayer.min.js"></script>
-正课内容
 <script>
     const dp = new DPlayer({
         container: document.getElementById('dplayer'),  <!-- 播放器容器元素 -->
@@ -160,7 +159,7 @@
         mutex: true,                                    <!-- 互斥，阻止多个播放器同时播放 -->
         video: {
             url: 'https://1877-1302844673.cos.ap-beijing.myqcloud.com/video/math/2020-8-11-math.mp4',      <!-- 视频地址 -->
-            pic: 'https://1877-1302844673.cos.ap-beijing.myqcloud.com/cover/math.jpg'         <!-- 视频封面 -->
+            pic: ''         <!-- 视频封面 -->
         },
         contextmenu: [                                 <!-- 自定义右键菜单--> 
             {
@@ -176,7 +175,24 @@
         ]
     });
 </script>
-自习课内容
+<style type="text/css">
+    #dplayer-video-container {
+        max-width: 800px;
+        margin: 0 auto;
+        margin-top: -1rem;
+    }
+    @media screen and (max-device-width: 400px) {
+        #dplayer {
+            width: 100%;
+        }
+    }
+</style>  
+
+<link rel="stylesheet" href="/assets/css/DPlayer.min.css">
+<div id="dplayer-video-container">
+    <div id="dplayer"></div>
+<div>
+<script src="/assets/js/DPlayer.min.js"></script>
 <script>
     const dp = new DPlayer({
         container: document.getElementById('dplayer'),  <!-- 播放器容器元素 -->
