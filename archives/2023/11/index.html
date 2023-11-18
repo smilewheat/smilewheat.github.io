@@ -1,20 +1,16 @@
 <!doctype html>
 <html lang="en"><head>
-<title>After Effect中单帧转场的实现思路 - LARMAX BLOG</title>
+<title>Archive：2023/11 - LARMAX BLOG</title>
 <meta charset="UTF-8">
 <meta name="keywords" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-<meta name="description" content="请注意，单帧转场适合于运动关系相对连贯的分镜转换，通常创作者也会使用Twixtor等变速软件对片段进行先快后慢的强烈变速，以此营造强烈的冲击感。请大家在创作时选择合适的情况来进行转场方式的选择。 常见单帧效果 查找边缘 DeepGlow halftone（各种半调自行选择，一般是蓝宝石的，但是蓝宝石爱崩溃，请斟酌） scanline (扫描线一般也是蓝宝石家的) 百叶窗（这个就是上面scanlin">
-<meta property="og:type" content="article">
-<meta property="og:title" content="After Effect中单帧转场的实现思路">
-<meta property="og:url" content="http://smilewheat.github.io/2023/10/10/After%20Effect%E4%B8%AD%E5%8D%95%E5%B8%A7%E8%BD%AC%E5%9C%BA%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%80%9D%E8%B7%AF/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="LARMAX BLOG">
+<meta property="og:url" content="http://smilewheat.github.io/archives/2023/11/index.html">
 <meta property="og:site_name" content="LARMAX BLOG">
-<meta property="og:description" content="请注意，单帧转场适合于运动关系相对连贯的分镜转换，通常创作者也会使用Twixtor等变速软件对片段进行先快后慢的强烈变速，以此营造强烈的冲击感。请大家在创作时选择合适的情况来进行转场方式的选择。 常见单帧效果 查找边缘 DeepGlow halftone（各种半调自行选择，一般是蓝宝石的，但是蓝宝石爱崩溃，请斟酌） scanline (扫描线一般也是蓝宝石家的) 百叶窗（这个就是上面scanlin">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-10-10T15:35:25.903Z">
-<meta property="article:modified_time" content="2023-11-18T16:13:14.748Z">
 <meta property="article:author" content="LARMAX">
 <meta name="twitter:card" content="summary">
 
@@ -22,15 +18,15 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1700328246711">
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1700328246724">
 
-<link rel="stylesheet" href="/css/style.css?v=1700328246711">
+<link rel="stylesheet" href="/css/style.css?v=1700328246724">
 
 
 
 
     
-        <link rel="stylesheet" href="/custom.css?v=1700328246711">
+        <link rel="stylesheet" href="/custom.css?v=1700328246724">
     
 
 
@@ -40,7 +36,7 @@
 <script src="/lib/lax.min.js" async></script>
 
 
-<script async src="/js/app.js?v=1700328246711"></script>
+<script async src="/js/app.js?v=1700328246725"></script>
 
  
 
@@ -164,18 +160,20 @@
 <img src="\pic\avator.jpg" width="150px"></a>
 
     </div>
-</div><!-- .nexmoe-drawer --></div><div id="nexmoe-content"><div class="nexmoe-primary"><div class="nexmoe-post">
-  <article>
-    
-        <div class="nexmoe-post-cover"> 
-            <img src="\pic\header.jpg" alt="After Effect中单帧转场的实现思路" loading="lazy">
-            <h1>After Effect中单帧转场的实现思路</h1>
-        </div>
-    
-    
-    <div class="nexmoe-post-meta">
+</div><!-- .nexmoe-drawer --></div><div id="nexmoe-content"><div class="nexmoe-primary"><section class="nexmoe-posts">
+    <div class="nexmoe-post">
+        <a href="/2023/11/19/YTDLP%E4%B8%8B%E8%BD%BD%E6%85%A2%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/">
+            
+                <div class="nexmoe-post-cover mdui-ripple"> 
+                    <img src="\pic\header.jpg" alt="YTDLP下载慢解决方法" loading="lazy">
+                    <h1>YTDLP下载慢解决方法</h1>
+                </div>
+            
+        </a>
+
+        <div class="nexmoe-post-meta">
     <div class="nexmoe-rainbow">
-        <a class="nexmoefont icon-calendar-fill">2023年10月10日</a>
+        <a class="nexmoefont icon-calendar-fill">2023年11月19日</a>
         
         
     </div>
@@ -186,54 +184,11 @@
     
 </div>
 
-    <p>请注意，单帧转场适合于运动关系相对连贯的分镜转换，通常创作者也会使用Twixtor等变速软件对片段进行先快后慢的强烈变速，以此营造强烈的冲击感。请大家在创作时选择合适的情况来进行转场方式的选择。</p>
-<p>常见单帧效果</p>
-<p>查找边缘</p>
-<p>DeepGlow</p>
-<p>halftone（各种半调自行选择，一般是蓝宝石的，但是蓝宝石爱崩溃，请斟酌）</p>
-<p>scanline (扫描线一般也是蓝宝石家的)</p>
-<p>百叶窗（这个就是上面scanline的平替，创建一个黑色的纯色层加上百叶窗就有扫描线的样子了）</p>
-<p>湍流置换（主要就是扭曲画面用的，小了调就是营造噪波，大了就是扭曲效果，大强度的话用于文字比较明显）</p>
-<p>cc smear（这个效果其实是用来模拟液体滴落的，但是也是用来扭曲画面的）</p>
-<p>曝光度（这个很明显就是模拟屏幕突然闪一下的效果）</p>
-<p>VR 数字损坏（这个是内置的效果，加上之后数字损坏的效果非常的好，不过貌似对于显卡的限制很强，有的显卡用这个效果会预览红屏报错）</p>
-<p>反转（用来反转色相，形成强烈反差）</p>
-<p>色调&#x2F;三色调（更改主体颜色）</p>
-
-    <p></p>
-
-  </article>
-
-  
-      
-    <div class="nexmoe-post-copyright">
-        <strong>Author：</strong>LARMAX<br>
-        <strong>Link：</strong><a href="http://smilewheat.github.io/2023/10/10/After%20Effect%E4%B8%AD%E5%8D%95%E5%B8%A7%E8%BD%AC%E5%9C%BA%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%80%9D%E8%B7%AF/" title="http:&#x2F;&#x2F;smilewheat.github.io&#x2F;2023&#x2F;10&#x2F;10&#x2F;After%20Effect%E4%B8%AD%E5%8D%95%E5%B8%A7%E8%BD%AC%E5%9C%BA%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%80%9D%E8%B7%AF&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;smilewheat.github.io&#x2F;2023&#x2F;10&#x2F;10&#x2F;After%20Effect%E4%B8%AD%E5%8D%95%E5%B8%A7%E8%BD%AC%E5%9C%BA%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%80%9D%E8%B7%AF&#x2F;</a><br>
-        
-            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
-
-        
+        <article>
+            
+        </article>
     </div>
-
-
-  
-  
-  <div class="nexmoe-post-meta nexmoe-rainbow">
-   
-    
-</div>
-  
-  
-    <script async src="/js/copy-codeblock.js?v=1700328246702"></script>
-  
-
-  
-      <div class="nexmoe-post-footer">
-          ------------------
-
-      </div>
-  
-</div></div><div class="nexmoe-post-right">    <div class="nexmoe-fixed">
+</section> </div><div class="nexmoe-post-right">    <div class="nexmoe-fixed">
         <div class="nexmoe-tool">
 
             
